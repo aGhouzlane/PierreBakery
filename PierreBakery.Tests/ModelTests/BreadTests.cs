@@ -9,7 +9,8 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void Bread_CreateBreadObj_BreadObject()
     {
-      //testing code will go here
+      Bread bread = new Bread(7);
+      Assert.AreEqual(9, bread.Quantity);
     }
   }
 }

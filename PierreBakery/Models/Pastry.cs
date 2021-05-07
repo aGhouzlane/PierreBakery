@@ -1,7 +1,9 @@
 namespace PierreBakery
 {
-  public class Pastry
+  public class Pastry : Bread
   {
-
+    public Pastry(int quantity) : base(quantity)
+    {
+    }
   }
 }
