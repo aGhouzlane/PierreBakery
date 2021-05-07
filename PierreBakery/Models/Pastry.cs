@@ -2,7 +2,7 @@ namespace PierreBakery
 {
   public class Pastry
   {
-    private const int pastryCost = 5;
+    private const int pastryCost = 2;
     public int PastryQuantity { get; }
     public Pastry(int pastryQuantity)
     {

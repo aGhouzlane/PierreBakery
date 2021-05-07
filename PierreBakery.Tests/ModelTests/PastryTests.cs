@@ -24,7 +24,7 @@ namespace PierreBakery.Tests
     public void FindPastryOrderPrice_CostTimeQuantity_Double()
     {
       Pastry pastry = new Pastry(8);
-      Assert.AreEqual(40, pastry.FindPastryOrderPrice());
+      Assert.AreEqual(16, pastry.FindPastryOrderPrice());
     }
   }
 }
