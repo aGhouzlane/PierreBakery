@@ -1,10 +1,18 @@
 namespace PierreBakery
 {
-  public class Pastry : Bread
+  public class Pastry
   {
-    public Pastry(int quantity) : base(quantity)
+    private const int pastryCost = 5;
+    public int PastryQuantity { get; }
+    public Pastry(int pastryQuantity)
     {
-      Quantity = quantity;
+      PastryQuantity = pastryQuantity;
     }
+
+    public int FindPastryOrderPrice()
+    {
+      return PastryQuantity * pastryCost;
+    }
+
   }
 }

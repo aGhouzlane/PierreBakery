@@ -2,15 +2,15 @@ namespace PierreBakery
 {
   public class Bread
   {
-    private double cost = 1.99;
-    public int Quantity { get; set; }
-    public Bread(int quantity)
+    private const int breadCost = 2;
+    public int BreadQuantity { get; set; }
+    public Bread(int breadQuantity)
     {
-      Quantity = quantity;
+      BreadQuantity = breadQuantity;
     }
-    public double findOrderPrice()
+    public int FindBreadOrderPrice()
     {
-      return Quantity * cost;
+      return BreadQuantity * breadCost;
     }
 
   }
