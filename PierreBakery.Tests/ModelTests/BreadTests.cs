@@ -10,7 +10,22 @@ namespace PierreBakery.Tests
     public void Bread_CreateBreadObj_BreadObject()
     {
       Bread bread = new Bread(7);
-      Assert.AreEqual(9, bread.Quantity);
+      Assert.AreEqual(bread, bread);
     }
+    [TestMethod]
+    public void Bread_InitializeQuantity_Quantity()
+    {
+      Bread bread = new Bread(7);
+      Assert.AreEqual(7, bread.Quantity);
+    }
+    [TestMethod]
+    public void findOrderPrice_CostTimeQuantiy_double()
+    {
+      Bread bread = new Bread(7);
+      Assert.AreEqual(13.93, bread.findOrderPrice());
+    }
+
+
+
   }
 }

@@ -4,6 +4,7 @@ namespace PierreBakery
   {
     public Pastry(int quantity) : base(quantity)
     {
+      Quantity = quantity;
     }
   }
 }
