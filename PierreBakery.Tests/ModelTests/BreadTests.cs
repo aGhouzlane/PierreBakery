@@ -14,7 +14,7 @@ namespace PierreBakery.Tests
     }
 
     [TestMethod]
-    public void Bread_InitializeQuantity_Quantity()
+    public void Bread_InitializeQuantity_Int()
     {
       Bread bread = new Bread(7);
       Assert.AreEqual(7, bread.BreadQuantity);

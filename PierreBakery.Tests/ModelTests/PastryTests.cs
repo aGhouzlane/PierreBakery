@@ -14,17 +14,24 @@ namespace PierreBakery.Tests
     }
 
     [TestMethod]
-    public void Pastry_InitializeQuantity_Quantity()
+    public void Pastry_InitializeQuantity_Int()
     {
       Pastry pastry = new Pastry(7);
       Assert.AreEqual(7, pastry.PastryQuantity);
     }
 
     [TestMethod]
-    public void FindPastryOrderPrice_CostTimeQuantity_Double()
+    public void FindPastryOrderPrice_CostTimeQuantity_Int()
     {
       Pastry pastry = new Pastry(8);
       Assert.AreEqual(16, pastry.FindPastryOrderPrice());
+    }
+
+    [TestMethod]
+    public void GetDiscountPrice_OneDollarOffThreePastries_Int()
+    {
+      Pastry pastry = new Pastry(7);
+      Assert.AreEqual(2, pastry.GetDiscountPrice());
     }
   }
 }
