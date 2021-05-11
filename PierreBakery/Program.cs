@@ -19,14 +19,18 @@ namespace PierreBakery
       {
         do
         {
-          Console.WriteLine("Welcome to Pierre's Bakery");
-          Console.WriteLine("Single Loaf of Bread: $5 - Buy Two Get One Free.");
-          Console.WriteLine("Single Pastry: $2 - Buy Three for $5.");
-          Console.WriteLine("Enter 1 to add a bread order.");
-          Console.WriteLine("Enter 2 to add a pastry order.");
-          Console.WriteLine("Enter 3 to check the price.");
-          Console.WriteLine("Enter 4 to checkout.");
-
+          Console.WriteLine("---------------------------------------------------");
+          Console.WriteLine("|          Welcome to Pierre's Bakery             |");
+          Console.WriteLine("---------------------------------------------------");
+          Console.WriteLine("|                 Price & Deals                   |");
+          Console.WriteLine("| Single Loaf of Bread: $5 - Buy Two Get One Free |");
+          Console.WriteLine("| Single Pastry: $2 - Buy Three for $5.           |");
+          Console.WriteLine("---------------------------------------------------");
+          Console.WriteLine("         Enter 1 to add a bread order");
+          Console.WriteLine("         Enter 2 to add a pastry order");
+          Console.WriteLine("         Enter 3 to check the price");
+          Console.WriteLine("         Enter 4 to checkout");
+          Console.WriteLine("------------------------------------------------------------------");
           userInput = int.Parse(Console.ReadLine());
           int totalOrderPrice = 0;
           switch (userInput)
@@ -58,16 +62,21 @@ namespace PierreBakery
               Bread newBread = new Bread(breadCounter);
               Pastry newPastry = new Pastry(pastryCounter);
               int temp = newPastry.GetDiscountPrice();
-              Console.WriteLine("Thank you for choosing Pierre's Bakery!");
+              Console.WriteLine("------------------------------------------------------------------");
+              Console.WriteLine("|          Thank you for choosing Pierre's Bakery!               |");
+              Console.WriteLine("------------------------------------------------------------------");
               foreach (int item in priceList)
               {
                 totalOrderPrice = totalOrderPrice + item;
               }
-              Console.WriteLine("Bread Loaves Quantity: " + breadCounter +
-              " + (" + newBread.GetFreeBread() + " Free Bread loaf(ves))");
-              Console.WriteLine("Pastry Quantity: " + pastryCounter);
-              Console.WriteLine("Total Order Price: $" + (totalOrderPrice - temp) + " ($"
-              + temp + " Discount was applied to the Total Price)");
+              Console.WriteLine(" Bread Loaves Quantity: " + breadCounter +
+              " + (" + newBread.GetFreeBread() + " Free Bread loaf(ves))            ");
+              Console.WriteLine("------------------------------------------------------------------");
+              Console.WriteLine(" Pastry Quantity: " + pastryCounter + "                           ");
+              Console.WriteLine("------------------------------------------------------------------");
+              Console.WriteLine(" Total Order Price: $" + (totalOrderPrice - temp) + " ($"
+              + temp + " Discount was applied to Total Price) ");
+              Console.WriteLine("------------------------------------------------------------------");
               break;
             default:
               Console.WriteLine("Input was not one of the menu entries.");
