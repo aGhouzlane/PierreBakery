@@ -32,23 +32,27 @@ namespace PierreBakery
           switch (userInput)
           {
             case 1:
+              Console.Write("Bread loaves needed: ");
               int breadInput = int.Parse(Console.ReadLine());
               Bread bread = new Bread(breadInput);
               breadCounter = breadCounter + breadInput;
               priceList.Add(bread.FindBreadOrderPrice());
               break;
             case 2:
+              Console.Write("Pastries quantity needed: ");
               int pastryInput = int.Parse(Console.ReadLine());
               Pastry pastry = new Pastry(pastryInput);
               pastryCounter = pastryCounter + pastryInput;
               priceList.Add(pastry.FindPastryOrderPrice());
               break;
             case 3:
+              Pastry nPastry = new Pastry(pastryCounter);
+              int discount = nPastry.GetDiscountPrice();
               foreach (int item in priceList)
               {
                 totalOrderPrice = totalOrderPrice + item;
               }
-              Console.WriteLine("Total Order Price: $" + totalOrderPrice);
+              Console.WriteLine("Total Order Price: $" + (totalOrderPrice - discount));
               break;
             case 4:
               Bread newBread = new Bread(breadCounter);
