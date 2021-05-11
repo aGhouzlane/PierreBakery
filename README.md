@@ -1,6 +1,6 @@
 # Pierre's Bakery
 
-#### A console application that allows users to add desired quantiy of bread loaves and pastries. The user can check the price anytime before or after exiting the application. The application also provides deals and discounts based on the chosen quantity. 
+#### A console application that allows users to add desired quantity of bread loaves and pastries. The user can check the price anytime before or after exiting the application. The application also provides deals and discounts based on the chosen quantity. 
 
 #### By Ahmed Ghouzlane
 
